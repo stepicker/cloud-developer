@@ -32,7 +32,7 @@ import { filterImageFromURL, deleteLocalFiles } from './util/util';
 		if (req.query.image_url) {
 			let image = req.query.image_url;
 			filterImageFromURL(image).then(filteredImage => {
-				res.status(200).send(filteredImage);
+				res.status(200).sendFile(filteredImage);
 			});
 		} else {
 			res
