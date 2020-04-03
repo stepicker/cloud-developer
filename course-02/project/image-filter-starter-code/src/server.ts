@@ -28,6 +28,7 @@ import { filterImageFromURL, deleteLocalFiles } from './util/util';
 
 	/**************************************************************************** */
 
+	// New API to return filtered image
 	app.get('/filteredimage', async (req, res) => {
 		if (req.query.image_url) {
 			let image = req.query.image_url;
